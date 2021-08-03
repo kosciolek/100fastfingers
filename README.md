@@ -8,9 +8,10 @@ Handles both the normal races, **and the AntiCheat guard**.
 
 - [100fastfingers](#100fastfingers)
   - [Demo](#demo)
-  - [Usage](#usage)
+  - [Installation](#installation)
     - [Server](#server)
     - [Extension](#extension)
+  - [Usage](#usage)
   - [Languages](#languages)
 
 ---
@@ -25,7 +26,7 @@ Handles both the normal races, **and the AntiCheat guard**.
 
 ---
 
-## Usage
+## Installation
 
 ### Server
 
@@ -44,6 +45,18 @@ cd ext && yarn build
 ```
 
 The `ext/dist` directory is ready to be loaded as an extension with Chrome's developer mode enabled.
+
+## Usage
+
+Open the extension's popup.
+
+In the **Normal** tab, you may submit fake tests. Select the desired WPM (mind that it's an approximation, and the result might be 20-30 higher on occasion).
+
+Once a high-scoring test is submitted, you will be forced to pass an AntiCheat test.
+
+In the **AntiCheat** tab, you may submit AntiCheat tests. Press the **RUN ANTICHEAT** button and, once enough time has passed, press **SUBMIT RECOGNIZED**.
+
+Not every AntiCheat image is recognized properly - some of them are too unreadable. You may click the **RESET** button to return to the starting point, and repeat the procedure until you get a satisfactory result.
 
 ## Languages
 
