@@ -1,12 +1,12 @@
 # 100fastfingers
 
-###### Because sometimes 10 ain't enough: Chrome Extension + Nodejs server + Tesseract.
+Because sometimes 10 ain't enough: Chrome Extension + Nodejs server + Tesseract.
 
 Cheating software for [10fastfingers.com](https://10fastfingers.com/).
 
 Handles both the normal races, **and the AntiCheat guard**.
 
-- [100fastfingers](#100fastfingers) - [Because sometimes 10 ain't enough: Chrome Extension + Nodejs server + Tesseract.](#because-sometimes-10-aint-enough-chrome-extension--nodejs-server--tesseract)
+- [100fastfingers](#100fastfingers)
   - [Demo](#demo)
   - [Usage](#usage)
     - [Server](#server)
