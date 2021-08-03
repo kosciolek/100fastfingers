@@ -15,7 +15,7 @@
     "server:start": "cd server && yarn start",
     "prepare": "husky install",
     "lint": "eslint ext/src server/src shared/src",
-    "lint:fix": "prettier . --write && eslint ext/src server/src shared/src --fix"
+    "lint:fix": "prettier ext/src server/src shared/src --write && eslint ext/src server/src shared/src --fix"
   },
   "devDependencies": {
     "@types/node": "^16.4.10",
