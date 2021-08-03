@@ -29,7 +29,7 @@ Handles both the normal races, **and the AntiCheat guard**.
 
 ### Server
 
-Install Tesseract and desired language packs.
+Install Tesseract and desired language packs. [Tesseract docs.](https://tesseract-ocr.github.io/tessdoc/)
 
 Start the server with:
 
