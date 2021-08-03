@@ -1,14 +1,10 @@
-import {
-  RecognizeAnswer,
-  RecognizeRequest,
-} from "@100ff/shared";
+import { RecognizeAnswer, RecognizeRequest } from "@100ff/shared";
 import express, { Router } from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import { PORT } from "./const";
 import { recognize } from "./recognize";
 import { base64ToByteArray } from "./base64ToByteArray";
-
 
 const app = express();
 

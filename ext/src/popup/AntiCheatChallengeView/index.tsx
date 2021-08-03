@@ -92,8 +92,9 @@ export const AntiCheatChallengeView: FC<AntiCheatChallengeViewProps> = (
           </li>
           <li>
             <Typography variant="body2">
-              The text-as-image meant to test that you're not a bot will appear underneath, as
-              well as its extracted text that will be used as the answer.
+              The text-as-image meant to test that you're not a bot will appear
+              underneath, as well as its extracted text that will be used as the
+              answer.
             </Typography>
           </li>
           <li>

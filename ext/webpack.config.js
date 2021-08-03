@@ -42,13 +42,13 @@ module.exports = {
         loader: "ts-loader",
         exclude: /node_modules/,
         options: {
-          projectReferences: true
+          projectReferences: true,
         },
       },
       {
         test: /\.(gif|png|jpg|jpeg|webm)$/,
-        loader: "file-loader"
-      }
+        loader: "file-loader",
+      },
     ],
   },
   plugins: [

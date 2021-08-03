@@ -1,4 +1,4 @@
-import {byteArrayToBase64} from "../utils/byteArrayToBase64";
+import { byteArrayToBase64 } from "../utils/byteArrayToBase64";
 
 export async function getAntiCheatImage() {
   const arrayBuffer = await fetch(

@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import {recognize} from "./recognize";
+import { recognize } from "./recognize";
 
 /**
  * Returns the AntiCheat text for a client's cookie.

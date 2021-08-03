@@ -1,4 +1,3 @@
-import {initializePopup} from "./initializePopup";
+import { initializePopup } from "./initializePopup";
 
 initializePopup();
-
