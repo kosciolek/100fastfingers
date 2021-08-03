@@ -15,10 +15,8 @@ export async function submitChallenge(wpm: number) {
     words.split("|").filter(Boolean).slice(0, answerLength).join(" ")
   );
 
-  console.log(answer);
-
   await new Promise((res) => setTimeout(res, 76 * 1000));
-  const resp = await fetch("https://10fastfingers.com/speedtests/auswertung", {
+  await fetch("https://10fastfingers.com/speedtests/auswertung", {
     headers: {
       accept: "application/json, text/javascript, */*; q=0.01",
       "accept-language": "en-US,en;q=0.9",
@@ -39,5 +37,4 @@ export async function submitChallenge(wpm: number) {
     mode: "cors",
     credentials: "include",
   }).then((x) => x.json());
-  console.log(resp);
 }

@@ -1,10 +1,11 @@
+/* eslint-disable */
+
 /* Copied from StackOverflow */
 
 export function decodeUtf8(arrayBuffer: ArrayBuffer): string {
   let result = "";
   let i = 0;
   let c = 0;
-  const c1 = 0;
   let c2 = 0;
 
   const data = new Uint8Array(arrayBuffer);

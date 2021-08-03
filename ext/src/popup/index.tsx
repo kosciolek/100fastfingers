@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { Box, CssBaseline, Paper, Tab, Tabs } from "@material-ui/core";
 import styled, { createGlobalStyle, css } from "styled-components";

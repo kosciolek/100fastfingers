@@ -1,9 +1,11 @@
 import fetch from 'node-fetch';
+
+
 export async function sendAntiCheatAnswer(words: string[], cookie: string) {
   const backspaceCounter = Math.floor(Math.random() * 5);
   const wordString = words.join(" ");
 
-  return await fetch(
+  return fetch(
     "https://10fastfingers.com/anticheat/auswertung_anticheat",
     {
       headers: {

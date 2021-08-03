@@ -8,6 +8,8 @@ import cors from "cors";
 import { PORT } from "./const";
 import { recognize } from "./recognize";
 import { base64ToByteArray } from "./base64ToByteArray";
+
+
 const app = express();
 
 app.use(bodyParser.json());
@@ -28,4 +30,5 @@ tesseractRouter.post("/recognize", (req, res) => {
 app.use(cors());
 app.use("/", tesseractRouter);
 
+// eslint-disable-next-line no-console
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

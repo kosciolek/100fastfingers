@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import { recognize } from "./recognize";
+import {recognize} from "./recognize";
 
 /**
  * Returns the AntiCheat text for a client's cookie.
@@ -23,7 +23,6 @@ export async function getAntiCheatText(cookie: string): Promise<string> {
     }
   );
   const arrayBuffer = await resp.arrayBuffer();
-  const txt = await recognize(arrayBuffer);
-  console.log(`Got Tesseract answer: ${txt}`);
-  return txt;
+  // eslint-disable-next-line @typescript-eslint/return-await
+  return await recognize(arrayBuffer);
 }

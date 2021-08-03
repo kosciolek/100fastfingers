@@ -1,5 +1,19 @@
 {
+
   "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "incremental": true,
+    "composite": true,
+    "noImplicitAny": false,
+    "lib": ["ES2020"],
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": "./",
     "paths": {
       "@100ff/shared": ["shared/src"],

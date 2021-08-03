@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import {
   Box,
   Button,
@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import styled from "styled-components";
+import { useUnmount } from "../../hooks/useUnmount";
 import { sendMessage } from "../../utils/sendMessage";
 import { RequestSubmitChallenge } from "../../api/RequestSubmitChallenge";
 
@@ -25,11 +26,10 @@ export const NormalView = () => {
     await sendMessage(msg, "content");
 
     let lastFrame;
-    const increaseProgress = (progress: number) => (time: number) => {
+    const increaseProgress = (newProgress: number) => (time: number) => {
       const timeMs = time / 1000;
       const thisFrame = !lastFrame ? 0 : timeMs - lastFrame;
-      console.log(thisFrame);
-      const nextProgress = Math.min(progress + thisFrame, 100);
+      const nextProgress = Math.min(newProgress + thisFrame, 100);
       setProgress(nextProgress);
       lastFrame = timeMs;
       if (nextProgress === 100) {
@@ -42,15 +42,12 @@ export const NormalView = () => {
 
     increaseProgress(0)(0);
   };
-  useEffect(
-    () => () => {
-      requestFrameRef.current !== undefined &&
-        cancelAnimationFrame(requestFrameRef.current);
-    },
-    []
-  );
 
-  console.log("prog", progress);
+  useUnmount(() => {
+    if (requestFrameRef.current !== undefined)
+      cancelAnimationFrame(requestFrameRef.current);
+  });
+
   const isSubmitDisabled = progress !== 0;
 
   return (
@@ -80,7 +77,7 @@ export const NormalView = () => {
         display="flex"
         flexDirection="column"
         alignItems="center"
-        border={"1px dashed lightgray"}
+        border="1px dashed lightgray"
         p={2}
       >
         <Box p={1} pb={2}>

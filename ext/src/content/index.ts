@@ -7,16 +7,14 @@ import {
 import { getAntiCheatImage } from "./getAntiCheatImage";
 import { OkMessage } from "../api/OkMessage";
 
-console.log(`Initializing 100fastfingers cheat.`);
-
-chrome.runtime.onMessage.addListener(function (
+chrome.runtime.onMessage.addListener((
   request: Message,
   sender,
   sendResponse
-) {
-  console.log("req", request);
+) => {
   switch (request.type) {
     case REQUEST_SUBMIT_CHALLENGE:
+      // eslint-disable-next-line no-case-declarations
       const msg = request as RequestSubmitChallenge;
       submitChallenge(msg.wpm);
       sendResponse({ type: "OK" } as OkMessage);

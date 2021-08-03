@@ -1,12 +1,12 @@
 import React, { FC, useState } from "react";
 import { Box, Button, ButtonGroup, Typography } from "@material-ui/core";
-import { sendMessage } from "../../utils/sendMessage";
 import {
   RecognizeAnswer,
   RecognizeRequest,
   TESS_SERVER_DEFAULT_HOST,
   TESS_SERVER_DEFAULT_PORT,
 } from "@100ff/shared";
+import { sendMessage } from "../../utils/sendMessage";
 import recogImagePlaceholder from "../assets/recog-image-placeholder.jpeg";
 
 export type AntiCheatChallengeViewProps = {};
@@ -21,7 +21,6 @@ export const AntiCheatChallengeView: FC<AntiCheatChallengeViewProps> = (
   const [imageBase64, setImageBase64] = useState("");
 
   async function onRunAntiCheatClick() {
-    console.log("requested image");
     const image = (await sendMessage(
       { type: "GET_ANTICHEAT_IMAGE" },
       "content"
@@ -124,13 +123,13 @@ export const AntiCheatChallengeView: FC<AntiCheatChallengeViewProps> = (
       </Box>
       <Box border="1px dashed lightgray">
         <img
-          width={"100%"}
+          width="100%"
           src={
             imageBase64
               ? `data:image/jpeg;base64,${imageBase64}`
               : recogImagePlaceholder
           }
-          alt="anticheat image"
+          alt="anticheat"
         />
       </Box>
       <Box py={2} border="1px dashed lightgray">

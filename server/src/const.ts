@@ -1,6 +1,6 @@
 import * as path from "path";
 import * as os from "os";
-import {TESS_SERVER_DEFAULT_PORT} from "@100ff/shared";
+import { TESS_SERVER_DEFAULT_PORT } from "@100ff/shared";
 
 export const TESSERACT_BIN = process.env.TESSERACT_BIN || "tesseract";
 export const lang = "pol";
