@@ -12,10 +12,10 @@ app.use(bodyParser.json());
 
 const tesseractRouter = Router();
 tesseractRouter.post("/recognize", (req, res) => {
-  const body = req.body as RecognizeRequest;
-  const arrayBuffer = base64ToByteArray(body.image);
+  const { image, lang } = req.body as RecognizeRequest;
+  const arrayBuffer = base64ToByteArray(image);
 
-  recognize(arrayBuffer).then((text) => {
+  recognize(arrayBuffer, lang).then((text) => {
     const response: RecognizeAnswer = {
       text,
     };

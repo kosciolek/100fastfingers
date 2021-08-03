@@ -13,6 +13,7 @@ export type AntiCheatChallengeViewProps = {};
 
 const TESS_SERVER_HOST = TESS_SERVER_DEFAULT_HOST;
 const TESS_SERVER_PORT = TESS_SERVER_DEFAULT_PORT;
+
 export const AntiCheatChallengeView: FC<AntiCheatChallengeViewProps> = (
   props
 ) => {
@@ -26,9 +27,12 @@ export const AntiCheatChallengeView: FC<AntiCheatChallengeViewProps> = (
       "content"
     )) as string;
     setImageBase64(image);
+
     const recogRequestBody: RecognizeRequest = {
       image,
+      lang: "pol",
     };
+
     const recogAnswer: RecognizeAnswer = await fetch(
       `http://${TESS_SERVER_HOST}:${TESS_SERVER_PORT}/recognize`,
       {

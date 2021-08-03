@@ -12,7 +12,7 @@
     "shared"
   ],
   "scripts": {
-    "server": "cd server && yarn start",
+    "server:start": "cd server && yarn start",
     "prepare": "husky install",
     "lint": "eslint ext/src server/src shared/src",
     "lint:fix": "prettier . --write && eslint ext/src server/src shared/src --fix"
